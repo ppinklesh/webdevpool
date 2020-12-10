@@ -30,7 +30,7 @@ const Dashboard = ({
         </div>
       <div className="profile bg-light" style={{backgroundColor:"rgb(80, 77, 77)",border:"none", display:"flex",flexDirection:"row",justifyContent:"space-around",position:"relative",top:"-200px",margin:"50px" }}>
         <img src={user.avatar} alt="" className="round-img" />
-        <p className="large text-primary" style={{color:"darkOrange", fontWeight:"bold",letterSpacing:"3px"}}>{user && user.name}</p>
+        <p className="large text-primary" style={{color:"darkOrange",letterSpacing:"3px"}}>{user && user.name}</p>
       </div>
       <div>
         <p className="lead">

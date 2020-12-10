@@ -12,7 +12,7 @@ const ProfileTop = ({
   },
 }) => {
   return (
-    <div className="profile-top bg-primary p-2">
+    <div className="profile-top bg-primary p-2" style={{backgroundColor:"rgb(54, 54, 54)"}}>
       <img className="round-img my-1" src={avatar} alt="" />
       <h1 className="large">{name}</h1>
       <p className="lead">
@@ -22,7 +22,7 @@ const ProfileTop = ({
       <div className="icons my-1">
         {website && (
           <a href={website} target="_blank" rel="noopener noreferrer">
-            <i className="fas fa-globe fa-2x" />
+            <i className="fas fa-globe fa-2x"/>
           </a>
         )}
         {social && social.twitter && (
