@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addExperience } from '../../actions/profile';
-import '../CSS/Experience.css';
 
 const AddExperience = ({ addExperience, history }) => {
   const [formData, setFormData] = useState({
@@ -112,7 +111,7 @@ const AddExperience = ({ addExperience, history }) => {
           />
         </div>
         <input type="submit" className="btn btn-primary my-1" style={{backgroundColor:"darkorange",border:"none",borderRadius:"4px"}}/>
-        <Link className="btn btn-light my-1" to="/dashboard" style={{borderRadius:"4px",backgroundColor:"lightblue"}}>
+        <Link className="btn btn-light my-1" to="/dashboard" style={{borderRadius:"4px"}}>
           Go Back
         </Link>
       </form>
