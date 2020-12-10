@@ -21,7 +21,7 @@ const Education = ({ education, deleteEducation }) => {
       <td>
         <i className="fas fa-trash-alt"
           onClick={() => deleteEducation(edu._id)}
-          style={{color:"red"}}
+          style={{color:"red",cursor:"pointer"}}
         />
         {/* <button
           onClick={() => deleteEducation(edu._id)}

@@ -21,7 +21,7 @@ const Experience = ({ experience, deleteExperience }) => {
       <td>
         <i className="fas fa-trash-alt"
           onClick={() => deleteExperience(exp._id)}
-          style={{color:"red"}}
+          style={{color:"red",cursor:"pointer"}}
         />
         {/* <button
           onClick={() => deleteExperience(exp._id)}
