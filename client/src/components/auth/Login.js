@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
+import '../CSS/login.css';
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -26,6 +27,7 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
+    <div className="main">
     <div className="login">
       <Link to="/">
       </Link>
@@ -54,6 +56,7 @@ const Login = ({ login, isAuthenticated }) => {
         <b>Don't have an account?</b> <Link style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/register">Sign Up</Link>
         </p>
       </div>
+    </div>
     </div>
   )
 };

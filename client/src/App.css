@@ -2,13 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-:root {
+/* :root {
 	--primary-color: #000000;
 	--dark-color: #343a40;
 	--light-color: #f4f4f4;
 	--danger-color: #850512;
 	--success-color: #167e2e;
-}
+} */
 
 * {
 	box-sizing: border-box;
@@ -16,7 +16,9 @@
 	padding: 0;
 }
 
-body {
+html body {
+	margin:0px;
+	padding: 0px;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1rem;
 	line-height: 1.6;
@@ -618,7 +620,7 @@ button {
 
 /* Login Form */
 
-.login {
+/* .login {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -676,11 +678,11 @@ button {
 	margin-bottom: 20px;
 	width: 100px;
 	object-fit: contain;
-}
+} */
 
 /*  Register Form */
 
-.amazon-logo {
+/* .amazon-logo {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	width: 100px;
@@ -746,4 +748,4 @@ select {
 
 .text-size {
 	font-size: 1.02rem;
-}
+} */
