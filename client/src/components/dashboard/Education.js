@@ -19,12 +19,16 @@ const Education = ({ education, deleteEducation }) => {
           )}
       </td>
       <td>
-        <button
+        <i className="fas fa-trash-alt"
+          onClick={() => deleteEducation(edu._id)}
+          style={{color:"red"}}
+        />
+        {/* <button
           onClick={() => deleteEducation(edu._id)}
           className="btn btn-danger"
         >
           Delete
-        </button>
+        </button> */}
       </td>
     </tr>
   ));
