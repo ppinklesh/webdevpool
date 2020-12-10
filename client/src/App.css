@@ -22,7 +22,7 @@ body {
 	line-height: 1.6;
 	background-color: #fff;
 	color: #333;
-	background-image: url("./img/ball.jpg");
+	/* background-image: url("./img/ball.jpg"); */
 	/* opacity: 80%; */
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -250,7 +250,6 @@ img {
 .round-img {
 	border-radius: 50%;
 	width: 200px;
-
 	box-shadow: 0 4px 8px 0 rgba(7, 7, 7, 0.911), 0 6px 20px 0 rgba(8, 2, 2, 0.699);
 }
 

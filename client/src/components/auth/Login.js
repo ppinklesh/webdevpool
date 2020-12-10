@@ -40,7 +40,6 @@ const Login = ({ login, isAuthenticated }) => {
             onChange={(e) => onChange(e)}
             required
           />
-
           <h5 className="text-size">Password</h5>
           <input
             type="password"
@@ -52,7 +51,7 @@ const Login = ({ login, isAuthenticated }) => {
           <input type="submit" className="signIn" value="Login" />
         </form>
         <p style={{ textAlign: "center", fontWeight: "bold" }} className="my-1">
-          Don't have an account? <Link style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/register">Sign Up</Link>
+        <b>Don't have an account?</b> <Link style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/register">Sign Up</Link>
         </p>
       </div>
     </div>
