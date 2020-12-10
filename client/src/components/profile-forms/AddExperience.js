@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addExperience } from '../../actions/profile';
+import '../CSS/Experience.css';
 
 const AddExperience = ({ addExperience, history }) => {
   const [formData, setFormData] = useState({
@@ -34,17 +35,18 @@ const AddExperience = ({ addExperience, history }) => {
           e.preventDefault();
           addExperience(formData, history);
         }}
-        style={{marginRight:"140px",marginTop:"60px"}}
+        style={{marginRight:"120px",marginTop:"60px"}}
       >
         <div className="form-group">
           <input
             type="text"
+            className="input_field"
             placeholder="Job Title"
             name="title"
             value={title}
             onChange={onChange}
             required
-            style={{fontSize:"15px",borderRadius:"4px"}}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
         </div>
         <div className="form-group">
@@ -55,7 +57,7 @@ const AddExperience = ({ addExperience, history }) => {
             value={company}
             onChange={onChange}
             required
-            style={{fontSize:"15px",borderRadius:"4px"}}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
         </div>
         <div className="form-group">
@@ -65,12 +67,12 @@ const AddExperience = ({ addExperience, history }) => {
             name="location"
             value={location}
             onChange={onChange}
-            style={{fontSize:"15px",borderRadius:"4px"}}
+            style={{fontSize:"15px",borderRadius:"4px",paddingTop:"8px",height:"45px"}}
           />
         </div>
         <div className="form-group">
           <h4>From Date</h4>
-          <input type="date" name="from" value={from} onChange={onChange} style={{fontSize:"15px",borderRadius:"4px"}}/>
+          <input type="date" name="from" value={from} onChange={onChange} style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}/>
         </div>
         <div className="form-group">
           <p>
@@ -95,7 +97,7 @@ const AddExperience = ({ addExperience, history }) => {
             value={to}
             onChange={onChange}
             disabled={current}
-            style={{fontSize:"15px",borderRadius:"4px"}}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
         </div>
         <div className="form-group">
