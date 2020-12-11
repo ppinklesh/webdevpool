@@ -2,21 +2,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-/* :root {
+:root {
 	--primary-color: #000000;
 	--dark-color: #343a40;
 	--light-color: #f4f4f4;
 	--danger-color: #850512;
 	--success-color: #167e2e;
-} */
+}
 
-* {
+*{
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	margin: 0px ;
+	padding: 0px ;
 }
 
 body {
+	margin: 0px ;
+	padding: 0px ;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1rem;
 	line-height: 1.6;
@@ -24,8 +26,8 @@ body {
 	color: #333;
 	/* background-image: url("./img/ball.jpg"); */
 	/* opacity: 80%; */
-	background-repeat: no-repeat;
-	background-size: cover;
+	/* background-repeat: no-repeat;
+	background-size: cover; */
 }
 
 .dash {

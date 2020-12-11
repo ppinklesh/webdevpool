@@ -5,6 +5,7 @@ import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
 import '../CSS/register.css';
+import Footer from '../layout/footer';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -36,6 +37,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     return <Redirect to="/dashboard" />;
   }
   return (
+    <div className="main12">
     <div className='register'>
       <div className="register-form">
         <h1>Create Account</h1>
@@ -77,6 +79,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </p>
         </form>
       </div>
+      {/* <Footer /> */}
+    </div>
+      <Footer />
     </div>
   )
 }

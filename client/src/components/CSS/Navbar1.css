@@ -23,7 +23,7 @@
 	background-color: rgb(90, 87, 87);
 	width: 300px;
 	overflow: scroll;
-	height: 700px;
+	height: 100vh;
 	/* display: flex; */
 	/* justify-content: center; */
 	position: fixed;

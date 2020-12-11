@@ -8,6 +8,7 @@ import Experience from "./Experience";
 import Education from "./Education";
 import { getCurrentProfile, deleteAccount } from "../../actions/profile";
 import '../CSS/Dashboard.css';
+import Footer from '../layout/footer';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -56,7 +57,10 @@ const Dashboard = ({
             </Fragment>
           )}
           </div>
+          {/* <Footer/> */}
       </Fragment>
+      {/* </div> */}
+      <Footer/>
       </div>
     );
 };
