@@ -6,6 +6,7 @@ import { login } from "../../actions/auth";
 import '../CSS/login.css';
 
 const Login = ({ login, isAuthenticated }) => {
+  //intializing a state
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -15,7 +16,10 @@ const Login = ({ login, isAuthenticated }) => {
 
   // making a controlled component
   const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ 
+      ...formData, 
+      [e.target.name]: e.target.value 
+    });
 
   const onSubmit = async (e) => {
     e.preventDefault();

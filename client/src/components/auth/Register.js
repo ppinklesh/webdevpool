@@ -18,7 +18,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   // making a controlled component
   const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+       ...formData, 
+       [e.target.name]: e.target.value 
+      });
 
   const onSubmit = async (e) => {
     e.preventDefault();
