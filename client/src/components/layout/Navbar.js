@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
-import Navbar1 from '../leftNavbar/leftNavbar.js';
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import '../CSS/Navbar1.css'
 import { IconContext } from 'react-icons';
+import * as IoIcons from "react-icons/io";
 
 const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
 
@@ -31,16 +31,19 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
               </Link>
             </li>
               <h1 className="top-header" style={{marginTop:'-60px', color:'white'}}>WebDevPool</h1>
-              <p className="top-header">Welcome {user && user.name}</p>
+              <h4 className="top-header" style={{letterSpacing:'2px'}}>Welcome {user && user.name}</h4>
               <div className="nav-text">
-                <li>
-                  <Link to="/dashboard" style={{color:'white'}}>Dashboard</Link>
+                <li className='arrow'>
+                  <Link to="/dashboard" style={{color:'white'}}>Dashboard </Link>
+                  <IoIcons.IoIosArrowForward style={{color:'white'}}/>
                 </li>
-                <li>
+                <li className='arrow'>
                   <Link to="/profiles" style={{color:'white'}}>Profiles</Link>
+                  <IoIcons.IoIosArrowForward style={{color:'white'}}/>
                 </li>
-                <li>
+                <li className='arrow'>
                   <Link to="/posts" style={{color:'white'}}>Posts Feed</Link>
+                  <IoIcons.IoIosArrowForward style={{color:'white'}}/>
                 </li>
               </div>
           </ul>
@@ -52,18 +55,6 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
 
   const authLinks = (
     <ul>
-      {/* <li>
-        <Link to="/profiles">Profiles</Link>
-      </li> */}
-      {/* <li>
-        <Link to="/posts">Posts Feed</Link>
-      </li> */}
-      {/* <li>
-        <Link to="/dashboard">
-          <i className="fas fa-user-secret" />{" "}
-          <span className="hide-sm">Dashboard</span>
-        </Link>
-      </li> */}
       <li>
         <a onClick={logout} href="#!">
           <i className="fas fa-power-off" />{" "}
