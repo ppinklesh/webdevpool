@@ -53,7 +53,8 @@ const Login = ({ login, isAuthenticated }) => {
           <input type="submit" className="signIn" value="Login" />
         </form>
         <p style={{ textAlign: "center", fontWeight: "bold" }} className="my-1">
-        <b>Don't have an account?</b> <Link style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/register">Sign Up</Link>
+        <b>Don't have an account?</b> 
+        <Link style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/register">Sign Up</Link>
         </p>
       </div>
     </div>

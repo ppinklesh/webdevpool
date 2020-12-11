@@ -16,9 +16,7 @@
 	padding: 0;
 }
 
-html body {
-	margin:0px;
-	padding: 0px;
+body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1rem;
 	line-height: 1.6;
@@ -282,11 +280,11 @@ img {
 	margin: 1.2rem 0;
 }
 
-.form .form-text {
+/* .form .form-text {
 	display: block;
 	margin-top: 0.3rem;
 	color: rgb(14, 13, 13);
-}
+} */
 
 .form input[type="text"],
 .form input[type="email"],
