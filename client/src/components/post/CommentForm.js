@@ -8,7 +8,7 @@ const CommentForm = ({ postId, addComment }) => {
 
   return (
     <div className="post-form">
-      <div className="bg-primary p">
+      <div className="bg-primary p" style={{backgroundColor:'darkturquoise'}}>
         <h3>Leave a Comment</h3>
       </div>
       <form
@@ -27,8 +27,9 @@ const CommentForm = ({ postId, addComment }) => {
           value={text}
           onChange={(e) => setText(e.target.value)}
           required
+          style={{borderRadius:'4px'}}
         />
-        <input type="submit" className="btn btn-dark my-1" value="Submit" />
+        <input type="submit" className="btn btn-dark my-1" value="Submit" style={{borderRadius:'4px',border:'none',backgroundColor:'darkorange'}}/>
       </form>
     </div>
   );

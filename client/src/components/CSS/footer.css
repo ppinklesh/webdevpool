@@ -1,14 +1,9 @@
-/* html body {
-    margin: -30px ;
-    padding: -30px ;
-    margin-right: 0px; */
-/* } */
 .footer_main{
-    margin: -30px;
-    padding: -30px;
+    margin: -35px;
+	padding: -35px;
 	background-color: #202020;
 	margin-top: 100px;
-	height: 450px;
+	height: 380px;
 }
 .footer_topbutton{
 	color: white;
@@ -39,4 +34,18 @@
 	color: #787878;
 	text-decoration: none;
 	padding: 5px;
+}
+.footer_bottom {
+	/* margin-top: 25px; */
+	height: 100px;
+	display: flex;
+	background-color: black;
+	justify-content: center;
+}
+.footer_bottom_link {
+	color: rgb(192, 189, 189);
+	padding: 15px;
+	/* padding-left: 15px; */
+	text-align: center;
+	/* padding-top: 10px; */
 }

@@ -63,7 +63,7 @@ const Login = ({ login, isAuthenticated }) => {
         </p>
       </div>
     </div>
-    <Footer/>
+    {/* <Footer/> */}
     </div>
   )
 };

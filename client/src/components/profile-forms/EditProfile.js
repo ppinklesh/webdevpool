@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
+import Footer from '../layout/footer';
 
 const EditProfile = ({
   profile: { profile, loading },
@@ -254,6 +255,7 @@ const EditProfile = ({
           Go Back
         </Link>
       </form>
+      <Footer />
     </Fragment>
   );
 };

@@ -79,9 +79,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </p>
         </form>
       </div>
-      {/* <Footer /> */}
     </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

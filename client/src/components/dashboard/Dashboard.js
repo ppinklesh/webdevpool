@@ -29,7 +29,7 @@ const Dashboard = ({
         <div className="dashboard_header">
           <h1 style={{paddingTop:"60px",fontSize:"40px",color:"white",letterSpacing:"5px"}}>Welcome to WebDevPool</h1>
         </div>
-      <div className="profile bg-light" style={{backgroundColor:"rgb(80, 77, 77)",border:"none", display:"flex",flexDirection:"row",justifyContent:"space-around",position:"relative",top:"-200px",margin:"50px" }}>
+      <div className="profile bg-light" style={{backgroundColor:"rgba(80,70,70)",border:"none", display:"flex",flexDirection:"row",justifyContent:"space-around",position:"relative",top:"-200px",margin:"50px" }}>
         <img src={user.avatar} alt="" className="round-img" />
         <p className="large text-primary" style={{color:"darkOrange",letterSpacing:"3px"}}>{user && user.name}</p>
       </div>

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addEducation } from '../../actions/profile';
 // import '../CSS/Education.css';
+import Footer from '../layout/footer';
 
 const AddEducation = ({ addEducation, history }) => {
   const [formData, setFormData] = useState({
@@ -118,6 +119,7 @@ const AddEducation = ({ addEducation, history }) => {
           Go Back
         </Link>
       </form>
+      <Footer />
     </Fragment>
   );
 };

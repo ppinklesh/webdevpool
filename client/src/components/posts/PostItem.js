@@ -46,8 +46,8 @@ const PostItem = ({
             >
               <i className="fas fa-thumbs-down" />
             </button>
-            <Link to={`/posts/${_id}`} className="btn btn-primary">
-              Comments{" "}
+            <Link to={`/posts/${_id}`} className="btn btn-primary" style={{borderRadius:'4px', border:'none', background:'white'}}>
+            <i className="fas fa-comment" style={{color:'black'}}/>{" "}
               {comments.length > 0 && (
                 <span className="comment-count">{comments.length}</span>
               )}
@@ -57,7 +57,7 @@ const PostItem = ({
                 onClick={() => deletePost(_id)}
                 type="button"
                 className="btn btn-danger"
-                style={{border:"none"}}
+                style={{border:"none",backgroundColor:'white'}}
               >
                 <i className="fas fa-trash-alt" style={{color:"red",border:"none"}}/>
               </button>

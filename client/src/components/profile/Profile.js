@@ -9,6 +9,7 @@ import ProfileExperience from "./ProfileExperience";
 import ProfileEducation from "./ProfileEducation";
 import ProfileGithub from "./ProfileGithub";
 import { getProfileById } from "../../actions/profile";
+import Footer from '../layout/footer';
 
 const Profile = ({
   getProfileById,
@@ -77,6 +78,7 @@ const Profile = ({
           </div>
         </Fragment>
       )}
+      <Footer />
     </Fragment>
   );
 };
