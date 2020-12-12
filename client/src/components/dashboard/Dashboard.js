@@ -10,6 +10,8 @@ import { getCurrentProfile, deleteAccount } from "../../actions/profile";
 import '../CSS/Dashboard.css';
 import Footer from '../layout/footer';
 
+//emailjs.send("service_z5x24cu","template_4jidrme");
+
 const Dashboard = ({
   getCurrentProfile,
   deleteAccount,

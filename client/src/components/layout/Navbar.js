@@ -32,6 +32,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
             </li>
               <h1 className="top-header" style={{marginTop:'-60px', color:'white'}}>WebDevPool</h1>
               <h4 className="top-header" style={{letterSpacing:'2px'}}>Welcome {user && user.name}</h4>
+              <div className="border"></div>
               <div className="nav-text">
                 <li className='arrow'>
                   <Link to="/dashboard" style={{color:'white'}}>Dashboard </Link>

@@ -5,7 +5,7 @@ import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
 import '../CSS/register.css';
-import Footer from '../layout/footer';
+import emailjs from 'emailjs-com';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -24,12 +24,20 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
        [e.target.name]: e.target.value 
       });
 
+//emailjs.send("service_z5x24cu","template_4jidrme");
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
       setAlert("Passwords do not match", "danger");
     } else {
       register({ name, email, password });
+      emailjs.sendForm('service_z5x24cu', 'template_4jidrme', e.target, 'user_RW0h4aDDnGKOvwFJ4ePmy')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
     }
   };
 
