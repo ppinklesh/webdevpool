@@ -3,8 +3,11 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
+import '../CSS/login.css';
+import Footer from '../layout/footer';
 
 const Login = ({ login, isAuthenticated }) => {
+  //intializing a state
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -14,7 +17,10 @@ const Login = ({ login, isAuthenticated }) => {
 
   // making a controlled component
   const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ 
+      ...formData, 
+      [e.target.name]: e.target.value 
+    });
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -26,6 +32,7 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
+    <div className="main">
     <div className="login">
       <Link to="/">
       </Link>
@@ -40,7 +47,6 @@ const Login = ({ login, isAuthenticated }) => {
             onChange={(e) => onChange(e)}
             required
           />
-
           <h5 className="text-size">Password</h5>
           <input
             type="password"
@@ -52,9 +58,12 @@ const Login = ({ login, isAuthenticated }) => {
           <input type="submit" className="signIn" value="Login" />
         </form>
         <p style={{ textAlign: "center", fontWeight: "bold" }} className="my-1">
-          Don't have an account? <Link style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/register">Sign Up</Link>
+        <b>Don't have an account?</b> 
+        <Link style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/register">Sign Up</Link>
         </p>
       </div>
+    </div>
+    {/* <Footer/> */}
     </div>
   )
 };

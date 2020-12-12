@@ -7,6 +7,7 @@ import PostItem from "../posts/PostItem";
 import CommentForm from "../post/CommentForm";
 import CommentItem from "../post/CommentItem";
 import { getPost } from "../../actions/post";
+import Footer from '../layout/footer';
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
@@ -27,6 +28,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
             <CommentItem key={comment._id} comment={comment} postId={post._id} />
           ))}
         </div>
+        <Footer />
       </Fragment>
     );
 };

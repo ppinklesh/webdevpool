@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import ProfileItem from "./ProfileItem";
 import { getProfiles } from "../../actions/profile";
+import Footer from '../layout/footer';
 
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -31,6 +32,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
             </div>
           </Fragment>
         )}
+        <Footer />
     </Fragment>
   );
 };

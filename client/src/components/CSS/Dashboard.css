@@ -1,0 +1,18 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(109, 106, 106);
+}
+.dashboard_header{
+    text-align: center;    
+    height: 400px;
+    background-image: url("https://1.cms.s81c.com/sites/default/files/2018-10-15/digital_binary_data_0.jpg");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+.dashboard_heading {
+    padding-top:"60px";
+    font-size: "40px";
+    letter-spacing:"5px";
+    color: white;
+}

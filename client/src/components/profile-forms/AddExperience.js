@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addExperience } from '../../actions/profile';
+import Footer from '../layout/footer';
 
 const AddExperience = ({ addExperience, history }) => {
   const [formData, setFormData] = useState({
@@ -22,37 +23,41 @@ const AddExperience = ({ addExperience, history }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Add An Experience</h1>
-      <p className="lead">
+      <p className="large text-primary">Add An Experience</p>
+      <p className="lead" style={{fontSize:"18px"}}>
         <i className="fas fa-code-branch" /> Add any developer/programming
         positions that you have had in the past
       </p>
-      <small>* = required field</small>
+      {/* <small>* = required field</small> */}
       <form
         className="form"
         onSubmit={e => {
           e.preventDefault();
           addExperience(formData, history);
         }}
+        style={{marginRight:"120px",marginTop:"60px"}}
       >
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Job Title"
+            className="input_field"
+            placeholder="Job Title"
             name="title"
             value={title}
             onChange={onChange}
             required
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
         </div>
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Company"
+            placeholder="Company"
             name="company"
             value={company}
             onChange={onChange}
             required
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
         </div>
         <div className="form-group">
@@ -62,11 +67,12 @@ const AddExperience = ({ addExperience, history }) => {
             name="location"
             value={location}
             onChange={onChange}
+            style={{fontSize:"15px",borderRadius:"4px",paddingTop:"8px",height:"45px"}}
           />
         </div>
         <div className="form-group">
           <h4>From Date</h4>
-          <input type="date" name="from" value={from} onChange={onChange} />
+          <input type="date" name="from" value={from} onChange={onChange} style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}/>
         </div>
         <div className="form-group">
           <p>
@@ -78,6 +84,7 @@ const AddExperience = ({ addExperience, history }) => {
               onChange={() => {
                 setFormData({ ...formData, current: !current });
               }}
+              style={{fontSize:"15px",borderRadius:"4px"}}
             />{' '}
             Current Job
           </p>
@@ -90,6 +97,7 @@ const AddExperience = ({ addExperience, history }) => {
             value={to}
             onChange={onChange}
             disabled={current}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
         </div>
         <div className="form-group">
@@ -100,13 +108,15 @@ const AddExperience = ({ addExperience, history }) => {
             placeholder="Job Description"
             value={description}
             onChange={onChange}
+            style={{fontSize:"15px",borderRadius:"4px"}}
           />
         </div>
-        <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
+        <input type="submit" className="btn btn-primary my-1" style={{backgroundColor:"darkorange",border:"none",borderRadius:"4px"}}/>
+        <Link className="btn btn-light my-1" to="/dashboard" style={{borderRadius:"4px"}}>
           Go Back
         </Link>
       </form>
+      <Footer />
     </Fragment>
   );
 };

@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
+import Footer from '../layout/footer';
 
 const EditProfile = ({
   profile: { profile, loading },
@@ -72,15 +73,16 @@ const EditProfile = ({
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Edit Your Profile</h1>
-      <p className="lead">
-        <i className="fas fa-user-secret" /> Add some changes to your profile
+      <p className="large text-primary">Edit Your Profile</p>
+      <p className="lead" style={{fontSize:"18px"}}>
+        <i className="fas fa-user-secret" style={{color:"brown"}}/> Add some changes to your profile
       </p>
-      <small>* = required field</small>
+      {/* <small>* = required field</small> */}
       <form className="form" onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
-          <select name="status" value={status} onChange={(e) => onChange(e)}>
-            <option>* Select Professional Status</option>
+          <select name="status" value={status} onChange={(e) => onChange(e)} 
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}>
+            {/* <option>* Select Professional Status</option> */}
             <option value="Developer">Developer</option>
             <option value="Junior Developer">Junior Developer</option>
             <option value="Senior Developer">Senior Developer</option>
@@ -101,6 +103,7 @@ const EditProfile = ({
             name="company"
             value={company}
             onChange={(e) => onChange(e)}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
           <small className="form-text">
             Could be your own company or one you work for
@@ -113,9 +116,11 @@ const EditProfile = ({
             name="website"
             value={website}
             onChange={(e) => onChange(e)}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
+
           />
           <small className="form-text">
-            Please enter the URL in form of https://example.com
+            Please enter the URL
           </small>
         </div>
         <div className="form-group">
@@ -125,9 +130,10 @@ const EditProfile = ({
             name="location"
             value={location}
             onChange={(e) => onChange(e)}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
           <small className="form-text">
-            City & state suggested (eg. Boston, MA)
+            City & state suggested .
           </small>
         </div>
         <div className="form-group">
@@ -137,9 +143,10 @@ const EditProfile = ({
             name="skills"
             value={skills}
             onChange={(e) => onChange(e)}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
           <small className="form-text">
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+            Please use comma separated values
           </small>
         </div>
         <div className="form-group">
@@ -149,6 +156,7 @@ const EditProfile = ({
             name="githubusername"
             value={githubusername}
             onChange={(e) => onChange(e)}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
           <small className="form-text">
             If you want your latest repos and a Github link, include your
@@ -161,6 +169,7 @@ const EditProfile = ({
             name="bio"
             value={bio}
             onChange={(e) => onChange(e)}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
           <small className="form-text">Tell us a little about yourself</small>
         </div>
@@ -170,6 +179,7 @@ const EditProfile = ({
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type="button"
             className="btn btn-light"
+            style={{backgroundColor:"rgb(44, 43, 43)",borderRadius:"4px",border:"none",color:"white"}}
           >
             Add Social Network Links
           </button>
@@ -186,6 +196,7 @@ const EditProfile = ({
                 name="twitter"
                 value={twitter}
                 onChange={(e) => onChange(e)}
+                style={{borderRadius:"4px"}}
               />
             </div>
 
@@ -197,6 +208,7 @@ const EditProfile = ({
                 name="facebook"
                 value={facebook}
                 onChange={(e) => onChange(e)}
+                style={{borderRadius:"4px"}}
               />
             </div>
 
@@ -208,6 +220,7 @@ const EditProfile = ({
                 name="youtube"
                 value={youtube}
                 onChange={(e) => onChange(e)}
+                style={{borderRadius:"4px"}}
               />
             </div>
 
@@ -219,6 +232,7 @@ const EditProfile = ({
                 name="linkedin"
                 value={linkedin}
                 onChange={(e) => onChange(e)}
+                style={{borderRadius:"4px"}}
               />
             </div>
 
@@ -230,16 +244,18 @@ const EditProfile = ({
                 name="instagram"
                 value={instagram}
                 onChange={(e) => onChange(e)}
+                style={{borderRadius:"4px"}}
               />
             </div>
           </Fragment>
         )}
 
-        <input type="submit" className="btn btn-primary my-1" />
+        <input type="submit" className="btn btn-primary my-1" style={{backgroundColor:"darkorange",border:"none",borderRadius:'4px'}}/>
         <Link className="btn btn-light my-1" to="/dashboard">
           Go Back
         </Link>
       </form>
+      <Footer />
     </Fragment>
   );
 };

@@ -7,6 +7,10 @@ import DashboardActions from "./DashboardActions";
 import Experience from "./Experience";
 import Education from "./Education";
 import { getCurrentProfile, deleteAccount } from "../../actions/profile";
+import '../CSS/Dashboard.css';
+import Footer from '../layout/footer';
+
+//emailjs.send("service_z5x24cu","template_4jidrme");
 
 const Dashboard = ({
   getCurrentProfile,
@@ -22,19 +26,26 @@ const Dashboard = ({
   return loading && profile === null ? (
     <Spinner />
   ) : (
+    <div className="body">
       <Fragment>
-        <h1 className="large text-primary">{user && user.name}'s Dashboard</h1>
+        <div className="dashboard_header">
+          <h1 style={{paddingTop:"60px",fontSize:"40px",color:"white",letterSpacing:"5px"}}>Welcome to WebDevPool</h1>
+        </div>
+      <div className="profile bg-light" style={{backgroundColor:"rgba(80,70,70)",border:"none", display:"flex",flexDirection:"row",justifyContent:"space-around",position:"relative",top:"-200px",margin:"50px" }}>
+        <img src={user.avatar} alt="" className="round-img" />
+        <p className="large text-primary" style={{color:"darkOrange",letterSpacing:"3px"}}>{user && user.name}</p>
+      </div>
+      <div>
         <p className="lead">
-          <i className="fas fa-user-secret" /> Welcome {user && user.name}
+          <i className="fas fa-user-secret" style={{color: "Gray"}} /> Welcome {user && user.name}
         </p>
         {profile !== null ? (
           <Fragment>
             <DashboardActions />
             <Experience experience={profile.experience} />
             <Education education={profile.education} />
-
             <div className="my-2">
-              <button className="btn btn-danger" onClick={() => deleteAccount()}>
+              <button className="btn btn-danger" style={{border:"none",backgroundColor:"DarkOrange", borderRadius:"5px"}}onClick={() => deleteAccount()}>
                 Delete My Account
             </button>
             </div>
@@ -42,12 +53,17 @@ const Dashboard = ({
         ) : (
             <Fragment>
               <p>You have not yet setup a profile, please add some info</p>
-              <Link to="/create-profile" className="btn btn-primary my-1">
+              <Link to="/create-profile" style={{backgroundColor:"darkorange",borderRadius:"5px"}}className="btn btn-primary my-1">
                 Create Profile
-          </Link>
+              </Link>
             </Fragment>
           )}
+          </div>
+          {/* <Footer/> */}
       </Fragment>
+      {/* </div> */}
+      <Footer/>
+      </div>
     );
 };
 

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addEducation } from '../../actions/profile';
+// import '../CSS/Education.css';
+import Footer from '../layout/footer';
 
 const AddEducation = ({ addEducation, history }) => {
   const [formData, setFormData] = useState({
@@ -30,12 +32,12 @@ const AddEducation = ({ addEducation, history }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Add Your Education</h1>
-      <p className="lead">
+      <p className="large text-primary">Add Your Education</p>
+      <p className="lead"  style={{fontSize:"18px"}}>
         <i className="fas fa-code-branch" /> Add any school or bootcamp that you
         have attended
       </p>
-      <small>* = required field</small>
+      {/* <small>* = required field</small> */}
       <form
         className="form"
         onSubmit={e => {
@@ -46,21 +48,23 @@ const AddEducation = ({ addEducation, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="* School or Bootcamp"
+            placeholder="School or Bootcamp"
             name="school"
             value={school}
             onChange={onChange}
             required
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
         </div>
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Degree or Certificate"
+            placeholder="Degree or Certificate"
             name="degree"
             value={degree}
             onChange={onChange}
             required
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
         </div>
         <div className="form-group">
@@ -70,11 +74,12 @@ const AddEducation = ({ addEducation, history }) => {
             name="fieldofstudy"
             value={fieldofstudy}
             onChange={onChange}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
         </div>
         <div className="form-group">
           <h4>From Date</h4>
-          <input type="date" name="from" value={from} onChange={onChange} />
+          <input type="date" name="from" value={from} onChange={onChange} style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}/>
         </div>
         <div className="form-group">
           <p>
@@ -96,6 +101,7 @@ const AddEducation = ({ addEducation, history }) => {
             value={to}
             onChange={onChange}
             disabled={current}
+            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
           />
         </div>
         <div className="form-group">
@@ -108,11 +114,12 @@ const AddEducation = ({ addEducation, history }) => {
             onChange={onChange}
           />
         </div>
-        <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
+        <input type="submit" className="btn btn-primary my-1" style={{backgroundColor:"darkOrange",borderRadius:"4px",border:"none"}}/>
+        <Link className="btn btn-light my-1" to="/dashboard" style={{border:"none",borderRadius:"4px"}}>
           Go Back
         </Link>
       </form>
+      <Footer />
     </Fragment>
   );
 };

@@ -4,6 +4,8 @@ import { Link, Redirect } from "react-router-dom";
 import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
+import '../CSS/register.css';
+import emailjs from 'emailjs-com';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -17,7 +19,12 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   // making a controlled component
   const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+       ...formData, 
+       [e.target.name]: e.target.value 
+      });
+
+//emailjs.send("service_z5x24cu","template_4jidrme");
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -25,6 +32,12 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       setAlert("Passwords do not match", "danger");
     } else {
       register({ name, email, password });
+      emailjs.sendForm('service_z5x24cu', 'template_4jidrme', e.target, 'user_RW0h4aDDnGKOvwFJ4ePmy')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
     }
   };
 
@@ -32,6 +45,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     return <Redirect to="/dashboard" />;
   }
   return (
+    <div className="main12">
     <div className='register'>
       <div className="register-form">
         <h1>Create Account</h1>
@@ -73,6 +87,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </p>
         </form>
       </div>
+    </div>
+      {/* <Footer /> */}
     </div>
   )
 }

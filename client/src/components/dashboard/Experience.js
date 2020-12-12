@@ -4,6 +4,7 @@ import Moment from "react-moment";
 import moment from "moment";
 import { connect } from "react-redux";
 import { deleteExperience } from "../../actions/profile";
+import Footer from '../layout/footer';
 
 const Experience = ({ experience, deleteExperience }) => {
   const experiences = experience.map((exp) => (
@@ -19,12 +20,10 @@ const Experience = ({ experience, deleteExperience }) => {
           )}
       </td>
       <td>
-        <button
+        <i className="fas fa-trash-alt"
           onClick={() => deleteExperience(exp._id)}
-          className="btn btn-danger"
-        >
-          Delete
-        </button>
+          style={{color:"red",cursor:"pointer"}}
+        />
       </td>
     </tr>
   ));
@@ -35,13 +34,14 @@ const Experience = ({ experience, deleteExperience }) => {
       <table className="table">
         <thead>
           <tr>
-            <th>Company</th>
-            <th className="hide-sm">Title</th>
-            <th className="hide-sm">Years</th>
+            <th style={{borderRadius:"4px", height:"10px"}}>Company</th>
+            <th className="hide-sm" style={{borderRadius:"4px", height:"10px"}}>Title</th>
+            <th className="hide-sm" style={{borderRadius:"4px"}}>Years</th>
           </tr>
         </thead>
         <tbody>{experiences}</tbody>
       </table>
+      {/* <Footer /> */}
     </Fragment>
   );
 };

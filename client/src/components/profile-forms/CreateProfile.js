@@ -151,6 +151,7 @@ const CreateProfile = ({
               onClick={() => toggleSocialInputs(!displaySocialInputs)}
               type="button"
               className="btn btn-light"
+              style={{backgroundColor:'rgb(131, 127, 127)',color:'white', borderRadius:'4px', border:'none'}}
             >
               Add Social Network Links
           </button>
@@ -215,7 +216,7 @@ const CreateProfile = ({
             </Fragment>
           )}
 
-          <input type="submit" className="btn btn-primary my-1" />
+          <input type="submit" className="btn btn-primary my-1" style={{backgroundColor:"darkOrange",borderRadius:"4px",border:"none"}}/>
           <Link className="btn btn-light my-1" to="/dashboard">
             Go Back
         </Link>
