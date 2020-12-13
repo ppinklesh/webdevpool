@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://pinklesh:8ICk8Rtfwxx5pVWU@cluster0.tek51.mongodb.net/debhuv?retryWrites=true&w=majority",
+  "jwtToken": "devhubsecrettoken",
+  "githubClientId": "73184dd9b43954c214ce",
+  "githubSecret": "120627360faf6828c63ea55c527ecbeeee35f74a"
+}
