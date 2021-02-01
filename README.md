@@ -110,7 +110,7 @@ The people from IT technical backgrounds, worldwide, students, learners, experts
 
 ![Dashboard](https://raw.githubusercontent.com/ppinklesh/images/master/webdevpool%20profile.jpg?token=AKN6MBX3FSXF3C4IAWNBX63AC5M3S)
 
-![dashboard continued](https://user-images.githubusercontent.com/63305945/102266435-6fbb4c00-3f3e-11eb-9fa9-1e2cf7602351.png)
+![dashboard continued](https://raw.githubusercontent.com/ppinklesh/images/master/webdevpool%20user%20details.jpg?token=AKN6MBV44OQ73FCRWTTZ5RDAC5NQC)
 
 ### All Users Profiles Page
 
@@ -118,11 +118,11 @@ The people from IT technical backgrounds, worldwide, students, learners, experts
 
 ### Individual Profile Page
 
-![profile individual](https://user-images.githubusercontent.com/63305945/102266634-bb6df580-3f3e-11eb-94ee-fe4f567b47d7.png)
+![profile individual](https://raw.githubusercontent.com/ppinklesh/images/master/webdevpool%20user%20profile.jpg?token=AKN6MBV6CQAVYUHNBBL2MMLAC5NT6)
 
 ### Individual Profile Page continued..
 
-![profile individual 2](https://user-images.githubusercontent.com/63305945/102266644-be68e600-3f3e-11eb-893d-cc0098aaa92c.png)
+![profile individual 2](https://raw.githubusercontent.com/ppinklesh/images/master/webdevpool%20bio.jpg?token=AKN6MBSZ6MXGTI3EXSULWFLAC5NXA)
 
 ### GitHub repos on Profile Page
 
