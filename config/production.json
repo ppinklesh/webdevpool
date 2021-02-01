@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://vasurajan:vasurajan@webdevpool.b9arp.mongodb.net/webdevpool?retryWrites=true&w=majority",
+  "jwtToken": "thisisasecrettoken",
+  "githubClientId": "73184dd9b43954c214ce",
+  "githubSecret": "120627360faf6828c63ea55c527ecbeeee35f74a"
+}
