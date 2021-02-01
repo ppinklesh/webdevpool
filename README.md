@@ -7,7 +7,7 @@ This web application will be a platform for Developers where developers can shar
 The user can share thoughts using create a post and other users can also like and comment on other’s posts.
 We have created this application for the recruitment purpose also, so that recruiters can visit our application and can visit as many profiles and can select/contact the perfect fit employee for their company.
 
-[wwebsite Link](https://web-dev-pool.herokuapp.com/){:target="\_blank" rel="noopener"}
+[wwebsite Link](/https://web-dev-pool.herokuapp.com/)
 
 ## Database:
 
